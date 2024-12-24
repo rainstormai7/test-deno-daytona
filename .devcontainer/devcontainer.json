@@ -1,22 +1,22 @@
 {
-    "name": "React Template with Vite and Deno",
-    "image": "ghcr.io/devcontainers/javascript-node:latest",
-    "forwardPorts": [
-      3000,
-      8000
-    ],
-    "customizations": {
-      "vscode": {
-        "settings": {
-          "deno.enable": true,
-          "deno.lint": true
-        },
-        "extensions": [
-          "denoland.vscode-deno",
-          "esbenp.prettier-vscode",
-          "ms-vscode.vscode-typescript-tslint-plugin"
-        ]
-      }
-    },
-    "postCreateCommand": "deno install"
-  }
+  "name": "React Template with Vite and Deno",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:latest",
+  "forwardPorts": [
+    3000,
+    8000
+  ],
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "deno.enable": true,
+        "deno.lint": true
+      },
+      "extensions": [
+        "denoland.vscode-deno",
+        "esbenp.prettier-vscode",
+        "ms-vscode.vscode-typescript-tslint-plugin"
+      ]
+    }
+  },
+  "postCreateCommand": "/bin/sh -c 'curl -fsSL https://deno.land/install.sh | sh && export DENO_INSTALL=\"/root/.deno\" && export PATH=\"$DENO_INSTALL/bin:$PATH\"'"
+}
